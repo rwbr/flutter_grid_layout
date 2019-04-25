@@ -10,7 +10,7 @@ class GridLayoutOrientation extends StatelessWidget {
   Widget build(BuildContext context) {
 
     final num itemHeight = _heightOfItem(context);
-    final int numberColumns = _numberOfGridColumns(context);
+    final int numberOfColumns = _numberOfGridColumns(context);
 
     return Container(
       color: _getRandomColor(),
@@ -38,8 +38,8 @@ class GridLayoutOrientation extends StatelessWidget {
           // isLargeScreen ? _largeScreenGridView(context) : _smallScreenListView(context),
           SliverGrid(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: numberColumns,
-              childAspectRatio: MediaQuery.of(context).size.width / numberColumns / itemHeight
+              crossAxisCount: numberOfColumns,
+              childAspectRatio: MediaQuery.of(context).size.width / numberOfColumns / itemHeight
             ),
             delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
               return Container(
